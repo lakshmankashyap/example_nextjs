@@ -1,13 +1,16 @@
 import { useRouter } from 'next/router'
+import posts from '../../posts.json'
 
 export default () => {
-    debugger;
     const router = useRouter()
+
+    const post = posts[router.query.blogId]
+    if (!post) return <p></p>
 
     return (
         <>
-            <h1>Blog post</h1>
-            <p>Post id: {router.query.blogId}</p>
+            <h1>{post.title}</h1>
+            <p>{post.content}</p>
         </>
     )
 }

@@ -8,6 +8,12 @@ export default function index() {
       <Link href='/blog'>
         <a>Blog</a>
       </Link>
+      <Link href='/csr'>
+        <a>CSR</a>
+      </Link>
+      <Link href='/ssr'>
+        <a>SSR</a>
+      </Link>
     </div>
   );
 }
